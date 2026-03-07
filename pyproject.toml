@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypack"
+version = "0.1.0"
+description = "Python library for easy creation of Minecraft datapacks"
+authors = [
+    {name = "Morten Barthel"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["pypack", "pypack.*"]
