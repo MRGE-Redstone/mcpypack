@@ -1,8 +1,9 @@
 # This file contains the Namespace class
 
 from pathlib import Path
-from typing import Dict
+from typing import List
 
+from MCpypack.recipe.recipe import Recipe
 
 class Namespace:
     """
@@ -22,6 +23,20 @@ class Namespace:
         """
         self.name: str = name
 
+        self.recipes: List[Recipe] = []
+
+    def add_recipes(self, *recipes: Recipe) -> None:
+        """
+        Add recipes to namespace.
+
+        Parameters
+        ----------
+        *recipes:
+            Recipes to add.
+        """
+
+        self.recipes.extend(recipes)
+
     def export(self, datapack_dir: Path) -> None:
         """
         Create namespace related content.
@@ -34,3 +49,8 @@ class Namespace:
 
         namespace_dir: Path = datapack_dir / "data" / self.name
         namespace_dir.mkdir(parents=True, exist_ok=False)
+
+        # Handle recipes
+        if self.recipes:
+            for recipe in self.recipes:
+                recipe.export(namespace_dir=namespace_dir)
