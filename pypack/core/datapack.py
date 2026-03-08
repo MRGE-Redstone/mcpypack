@@ -1,7 +1,7 @@
 # This file contains the Datapack class used
 
-from pathlib import Path
-from typing import Dict # For export directory
+from pathlib import Path # For export directory
+from typing import Dict
 from packaging.version import Version # For checking Minecraft Version
 import shutil
 import json
@@ -110,10 +110,8 @@ class Datapack:
             json.dump(pack_mcmeta_content, file, indent=4)
 
         # Copy icon into datapack
-        print("lol")
         print(self.icon_path)
         if self.icon_path and self.icon_path.is_file():
-            print("Test")
             destination: Path = datapack_dir / "pack.png"
             shutil.copy(self.icon_path, destination)
 
