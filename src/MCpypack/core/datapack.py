@@ -5,6 +5,7 @@ from typing import Dict, List
 from packaging.version import Version # For checking Minecraft Version
 import shutil
 import json
+import zipfile
 
 from .namespace import Namespace
 
@@ -98,11 +99,20 @@ class Datapack:
         """
         self.namespaces.extend(namespaces)
 
-    def export(self) -> None:
+    def export(self, overwrite: bool = True, zip: bool = False) -> None:
         """
         Export the datapack to location specified in 'relative_export_dir'.
 
         Creates the export directory if it does not exist.
+
+        Parameters
+        ----------
+        overwrite:
+            Delete the current version of the datapack and create the new one or
+            panic if there is already a version of the datapack present.
+            If set to 'False' append a number to the name if it already exists.
+        zip:
+            Export the datapack as a zip file.
         """
 
         # Create export directory
@@ -110,7 +120,23 @@ class Datapack:
 
         # Create datapack directory
         datapack_dir: Path = self.export_dir / self.name
-        datapack_dir.mkdir(parents=True, exist_ok=True)
+
+        # Delete previous version of the datapack if present
+        if overwrite and datapack_dir.is_dir():
+            shutil.rmtree(datapack_dir)
+
+        if datapack_dir.exists():
+            if overwrite:
+                # Delete previous version of the datapack
+                shutil.rmtree(datapack_dir)
+            else:
+                # Next available numbered version
+                counter: int = 1
+                while datapack_dir.exists():
+                    datapack_dir = self.export_dir / f"{self.name}_{counter}"
+                    counter += 1
+
+        datapack_dir.mkdir(parents=True, exist_ok=False)
 
         # Create pack.mcmeta file
         pack_mcmeta_content: Dict[str, Dict[str, str | int | float]] = {
@@ -134,3 +160,12 @@ class Datapack:
         if self.namespaces:
             for namespace in self.namespaces:
                 namespace.export(datapack_dir=datapack_dir)
+
+        # Create zip if 'zip' is set to 'True'
+        if zip:
+            zip_file_path: Path = self.export_dir / f"{datapack_dir.name}.zip"
+            with zipfile.ZipFile(zip_file_path, "w",
+                                 compression=zipfile.ZIP_DEFLATED) as zipf:
+                for file_path in datapack_dir.rglob("*"):
+                    zipf.write(file_path,
+                               arcname=file_path.relative_to(datapack_dir.parent))
