@@ -35,7 +35,14 @@ class Namespace:
             Recipes to add.
         """
 
-        self.recipes.extend(recipes)
+        # Ensure recipes do not share the same name
+        existing_names: List[str] = [recipe.name for recipe in self.recipes]
+
+        for recipe in recipes:
+            if recipe.name in existing_names:
+                raise ValueError(f"Recipe with name {recipe.name} already exists in namespace {self.name}")
+            existing_names.append(recipe.name)
+            self.recipes.append(recipe)
 
     def export(self, datapack_dir: Path) -> None:
         """
