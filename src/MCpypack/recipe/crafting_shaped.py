@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Set
 from .recipe import Recipe
 
 class Crafting_Shaped(Recipe):
@@ -27,7 +27,8 @@ class Crafting_Shaped(Recipe):
             crafting. Each row is one string. Spaces can be used to indicate an
             empty spot.
         key:
-            All keys used for this shaped crafting recipe.
+            All keys used for this shaped crafting recipe. Must contain all keys
+            used in pattern.
         result_id:
             Result of the crafting.
         result_count:
@@ -39,6 +40,15 @@ class Crafting_Shaped(Recipe):
         """
         super().__init__(name)
 
+        # Collect all keys used
+        pattern_keys: Set[str] = {char for row in pattern for char in row if char != " "}
+        used_keys: Set[str] = set(key.keys())
+
+        # Make sure every key in pattern is also in keys
+        if pattern_keys != used_keys:
+            raise ValueError(f"Pattern keys {pattern_keys} and used keys {used_keys} do not match.")
+
+        # Create the config the way Minecraft expects it
         self.config: Dict[str, Any] = {"type": "minecraft:crafting_shaped",
                              "category": category,
                              "group": group,
