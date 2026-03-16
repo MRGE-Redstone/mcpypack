@@ -54,7 +54,7 @@ class Namespace:
         """
 
         namespace_dir: Path = datapack_dir / "data" / self.name
-        namespace_dir.mkdir(parents=True, exist_ok=False)
+        namespace_dir.mkdir(parents=True, exist_ok=True)
 
         # Handle recipes
         if self.recipes:

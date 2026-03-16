@@ -106,8 +106,6 @@ class Datapack:
             existing_namespaces.append(namespace.name)
             self.namespaces.append(namespace)
 
-        self.namespaces.extend(namespaces)
-
     def export(self, overwrite: bool = True, zip: bool = False) -> None:
         """
         Export the datapack to location specified in 'relative_export_dir'.
@@ -131,20 +129,16 @@ class Datapack:
         datapack_dir: Path = self.export_dir / self.name
 
         # Delete previous version of the datapack if present
-        if overwrite and datapack_dir.is_dir():
-            shutil.rmtree(datapack_dir)
-
-        if datapack_dir.exists():
-            if overwrite:
-                # Delete previous version of the datapack
+        if overwrite:
+            if datapack_dir.exists():
                 shutil.rmtree(datapack_dir)
-            else:
-                # Next available numbered version
-                counter: int = 1
-                while datapack_dir.exists():
-                    datapack_dir = self.export_dir / f"{self.name}_{counter}"
-                    counter += 1
+        else:
+            counter: int = 1
+            while datapack_dir.exists():
+                datapack_dir = self.export_dir / f"{self.name}_{counter}"
+                counter += 1
 
+        # Now safe to create directory
         datapack_dir.mkdir(parents=True, exist_ok=False)
 
         # Create pack.mcmeta file
