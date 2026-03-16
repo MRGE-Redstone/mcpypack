@@ -1,6 +1,7 @@
 from typing import Any
 
 from .category import Category, CategoryLike
+from .group import Group
 from .recipe import Recipe
 
 class CraftingShapeless(Recipe):
@@ -13,7 +14,7 @@ class CraftingShapeless(Recipe):
                  ingredients: list[str],
                  result_id: str,
                  result_count: int,
-                 group: str = "",
+                 group: Group = "",
                  category: CategoryLike = Category.MISC,
                  ) -> None:
         """

@@ -1,5 +1,7 @@
 from typing import Any
 
+from .group import Group
+
 from .category import CategoryLike, Category
 from .recipe import Recipe
 
@@ -14,7 +16,7 @@ class Crafting_Shaped(Recipe):
                  key: dict[str, str],
                  result_id: str,
                  result_count: int,
-                 group: str = "",
+                 group: Group = "",
                  category: CategoryLike = Category.MISC,
                  ) -> None:
         """

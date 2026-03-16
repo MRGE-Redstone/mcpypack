@@ -1,3 +1,8 @@
+# This file contains the Category enum used to represent the category in which
+# each recipe is put into
+# It also contains the CategoryLike type which is the Category type or the
+# str type
+
 from enum import StrEnum
 from typing import TypeAlias
 
