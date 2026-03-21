@@ -65,6 +65,7 @@ class Time:
                 case _:
                     raise ValueError(f"Unsupported time unit: {t}")
 
+    @property
     def ticks(self) -> Ticks:
         """
         Return time as Minecraft ticks.

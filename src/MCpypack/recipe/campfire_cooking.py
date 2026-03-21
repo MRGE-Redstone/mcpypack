@@ -34,7 +34,7 @@ class CampfireCooking(Recipe):
 
         self.config: dict[str, Any] = {
             "type": "minecraft:campfire_cooking",
-            "cookingtime": cookingtime.ticks().value,
+            "cookingtime": cookingtime.ticks.value,
             "ingredient": ingredient,
             "result": result.to_dict()
         }

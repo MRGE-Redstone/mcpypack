@@ -5,12 +5,15 @@ from .core.namespace import Namespace
 __all__ = ["Datapack", "Namespace"]
 
 # Recipes
-from .recipe import CraftingShaped, CraftingShapeless, CampfireCooking
+from .recipe import CraftingShaped, CraftingShapeless, CampfireCooking, Smoking, Blasting, Smelting
 
 __all__ += [
     "CraftingShaped",
     "CraftingShapeless",
-    "CampfireCooking"
+    "CampfireCooking",
+    "Smelting",
+    "Smoking",
+    "Blasting"
 ]
 
 # Times
