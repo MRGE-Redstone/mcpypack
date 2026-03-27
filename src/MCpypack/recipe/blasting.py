@@ -2,6 +2,8 @@
 # It represents a blasting recipe
 
 from typing import Any
+
+from MCpypack.item import Item
 from .utils import CategoryLike, Group, Result, Time, Category
 from .recipe import Recipe
 
@@ -13,7 +15,7 @@ class Blasting(Recipe):
 
     def __init__(self,
                  name: str,
-                 ingredient: str,
+                 ingredient: Item,
                  cookingtime: Time,
                  result: Result,
                  group: Group = '',
@@ -44,12 +46,12 @@ class Blasting(Recipe):
         # Ensure valid value if string
         category_final: str = str(Category.from_str(category))
 
-        self.config: dict[str, Any] = {
+        self.config: dict[str, int | str | dict] = {
             "type": "minecraft:blasting",
             "category": category_final,
             "group": group,
             "cookingtime": cookingtime.ticks.value,
-            "ingredient": ingredient,
+            "ingredient": ingredient.value,
             "result": result.to_dict()
 
         }

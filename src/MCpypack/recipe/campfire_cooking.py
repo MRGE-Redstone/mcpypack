@@ -1,6 +1,8 @@
 # This file contains the CampfireCooking class
 
 from typing import Any
+
+from MCpypack.item import Item
 from .utils import Result, Time
 from .recipe import Recipe
 
@@ -11,7 +13,7 @@ class CampfireCooking(Recipe):
 
     def __init__(self,
                  name: str,
-                 ingredient: str,
+                 ingredient: Item,
                  cookingtime: Time,
                  result: Result,
                  ) -> None:
@@ -32,9 +34,9 @@ class CampfireCooking(Recipe):
 
         super().__init__(name)
 
-        self.config: dict[str, Any] = {
+        self.config: dict[str, int | str | dict] = {
             "type": "minecraft:campfire_cooking",
             "cookingtime": cookingtime.ticks.value,
-            "ingredient": ingredient,
+            "ingredient": ingredient.value,
             "result": result.to_dict()
         }

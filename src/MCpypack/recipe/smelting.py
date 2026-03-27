@@ -2,6 +2,8 @@
 # It represents a smelting recipe
 
 from typing import Any
+
+from MCpypack.item import Item
 from .utils import CategoryLike, Group, Result, Time, Category
 from .recipe import Recipe
 
@@ -13,7 +15,7 @@ class Smelting(Recipe):
 
     def __init__(self,
                  name: str,
-                 ingredient: str,
+                 ingredient: Item,
                  cookingtime: Time,
                  result: Result,
                  group: Group = '',
@@ -49,7 +51,7 @@ class Smelting(Recipe):
             "category": category_final,
             "group": group,
             "cookingtime": cookingtime.ticks.value,
-            "ingredient": ingredient,
+            "ingredient": ingredient.value,
             "result": result.to_dict()
 
         }

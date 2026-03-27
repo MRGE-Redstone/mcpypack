@@ -7,6 +7,7 @@ from .campfire_cooking import CampfireCooking
 from .smelting import Smelting
 from .blasting import Blasting
 from .smoking import Smoking
+from .stonecutting import Stonecutting
 
 __all__: list[str] = [
     "CraftingShaped",
@@ -15,14 +16,16 @@ __all__: list[str] = [
     "Smelting",
     "Blasting",
     "Smoking",
+    "Stonecutting",
 ]
 
-from .utils import Milliseconds, Seconds, Minutes, Hours
+from .utils import Milliseconds, Seconds, Minutes, Hours, Time
 __all__ += [
     "Milliseconds",
     "Seconds",
     "Minutes",
-    "Hours"
+    "Hours",
+    "Time"
 ]
 
 from .utils import Result

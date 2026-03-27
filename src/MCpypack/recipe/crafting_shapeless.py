@@ -1,5 +1,7 @@
 from typing import Any
 
+from MCpypack.item import Item
+
 from .utils import Category, CategoryLike, Group, Result
 from .recipe import Recipe
 
@@ -10,7 +12,7 @@ class CraftingShapeless(Recipe):
 
     def __init__(self,
                  name: str,
-                 ingredients: list[str],
+                 ingredients: list[Item],
                  result: Result,
                  group: Group = "",
                  category: CategoryLike = Category.MISC,
@@ -37,9 +39,11 @@ class CraftingShapeless(Recipe):
         # Convert category to Category enum if it is a string
         # Ensure valid value if string
         category_final: str = str(Category.from_str(category))
+        
+        ingredients_final: list[str] = list(map(lambda ingredient: ingredient.value, ingredients))
 
-        self.config: dict[str, Any] = {"type": "minecraft:crafting_shapeless",
+        self.config: dict[str, int | str | dict | list[str]] = {"type": "minecraft:crafting_shapeless",
                              "category" : category_final,
                              "group" : group,
-                             "ingredients" : ingredients,
-                             "result" : {"count": result.count, "id" : result.item_id}}
+                             "ingredients" : ingredients_final,
+                             "result" : result.to_dict()}

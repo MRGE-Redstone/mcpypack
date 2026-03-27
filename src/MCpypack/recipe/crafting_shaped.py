@@ -1,5 +1,7 @@
 from typing import Any
 
+from MCpypack.item import Item
+
 from .utils import Category, CategoryLike, Group, Result
 from .recipe import Recipe
 
@@ -11,7 +13,7 @@ class CraftingShaped(Recipe):
     def __init__(self,
                  name: str,
                  pattern: list[str],
-                 key: dict[str, str],
+                 key: dict[str, Item],
                  result: Result,
                  group: Group = "",
                  category: CategoryLike = Category.MISC,
@@ -52,11 +54,16 @@ class CraftingShaped(Recipe):
         # Ensure valid value if string
         category_final: str = str(Category.from_str(category))
 
+        # dict[str, Item] to dict[str, str]
+        key_final: dict[str, str] = {
+            k: v.value for k, v in key.items()
+        }
+
         # Create the config the way Minecraft expects it
-        self.config: dict[str, Any] = {"type": "minecraft:crafting_shaped",
+        self.config: dict[str, int | str | dict | list[str]] = {"type": "minecraft:crafting_shaped",
                              "category": category_final,
                              "group": group,
-                             "key": key,
+                             "key": key_final,
                              "pattern": pattern,
-                             "result": {"count": result.count, "id" : result.item_id}}
+                             "result": result.to_dict()}
 
