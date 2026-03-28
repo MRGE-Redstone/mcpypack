@@ -29,6 +29,8 @@ class CampfireCooking(Recipe):
             Cookingtime in real-life time values.
         result:
             Result of the cooking.
+        experience:
+            Optional. The output experience of the recipe.
         """
 
         super().__init__(name)

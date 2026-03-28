@@ -53,7 +53,7 @@ class Furnace(Recipe, ABC):
         group:
             String identifier for grouping recipes.
         experience:
-            The output experience of the recipe.
+            Optional. The output experience of the recipe.
         """
 
         super().__init__(name)
