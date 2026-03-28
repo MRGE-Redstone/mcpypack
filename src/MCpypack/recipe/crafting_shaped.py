@@ -1,8 +1,6 @@
-from typing import Any
-
 from MCpypack.item import Item
 
-from .utils import Category, CategoryLike, Group, Result
+from .utils import Category, CategoryLike, Group, CountedResult
 from .recipe import Recipe
 
 class CraftingShaped(Recipe):
@@ -14,7 +12,7 @@ class CraftingShaped(Recipe):
                  name: str,
                  pattern: list[str],
                  key: dict[str, Item],
-                 result: Result,
+                 result: CountedResult,
                  group: Group = "",
                  category: CategoryLike = Category.MISC,
                  ) -> None:

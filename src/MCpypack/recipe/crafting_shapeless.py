@@ -1,8 +1,6 @@
-from typing import Any
-
 from MCpypack.item import Item
 
-from .utils import Category, CategoryLike, Group, Result
+from .utils import Category, CategoryLike, Group, CountedResult
 from .recipe import Recipe
 
 class CraftingShapeless(Recipe):
@@ -13,7 +11,7 @@ class CraftingShapeless(Recipe):
     def __init__(self,
                  name: str,
                  ingredients: list[Item],
-                 result: Result,
+                 result: CountedResult,
                  group: Group = "",
                  category: CategoryLike = Category.MISC,
                  ) -> None:

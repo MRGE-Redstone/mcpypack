@@ -28,9 +28,10 @@ __all__ += [
 ]
 
 # Result
-from .recipe import Result
+from .recipe import SimpleResult, CountedResult
 __all__ += [
-    "Result"
+    "SimpleResult",
+    "CountedResult"
 ]
 
 # Items

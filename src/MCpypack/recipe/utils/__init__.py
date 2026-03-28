@@ -1,7 +1,7 @@
 # __init__.py file of 'recipe/utils/'
 # Export Category and CategoryLike
 # Export Group
-# Export Result
+# Export SimpleResult, CountedResult
 # Export Experience
 # Export Time, Milliseconds, Seconds, Minutes, and Hours
 
@@ -13,8 +13,8 @@ __all__ += ["Category", "CategoryLike"]
 from .group import Group
 __all__ += ["Group"]
 
-from .result import Result
-__all__ += ["Result"]
+from .result import SimpleResult, CountedResult
+__all__ += ["SimpleResult", "CountedResult"]
 
 from .experience import Experience
 __all__ += ["Experience"]

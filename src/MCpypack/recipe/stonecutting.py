@@ -1,8 +1,6 @@
-from typing import Any
-
 from MCpypack.item import Item
 
-from .utils import Result
+from .utils import CountedResult
 from .recipe import Recipe
 
 class Stonecutting(Recipe):
@@ -13,7 +11,7 @@ class Stonecutting(Recipe):
     def __init__(self,
                  name: str,
                  ingredient: Item,
-                 result: Result,
+                 result: CountedResult,
                  ) -> None:
         """
         Init stonecutting recipe.

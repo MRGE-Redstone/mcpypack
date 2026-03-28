@@ -8,7 +8,7 @@
 
 from MCpypack.item import Item
 from .recipe import Recipe
-from .utils import Time, Result, Group, CategoryLike, Category, Experience
+from .utils import Time, SimpleResult, Group, CategoryLike, Category, Experience
 
 from abc import ABC, abstractmethod
 
@@ -29,7 +29,7 @@ class Furnace(Recipe, ABC):
                 name: str,
                 ingredient: Item,
                 cookingtime: Time,
-                result: Result,
+                result: SimpleResult,
                 group: Group | None = None,
                 category: CategoryLike = Category.MISC,
                 experience: Experience | None = None,
@@ -62,7 +62,7 @@ class Furnace(Recipe, ABC):
         # Ensure valid value if string
         category_final: str = str(Category.from_str(category))
 
-        self.config: dict[str, str | int | float | dict[str, str | int]] = {
+        self.config: dict[str, str | int | float | dict[str, str]] = {
             "type": self.TYPE,
             "category": category_final,
             "cookingtime": cookingtime.ticks.value,

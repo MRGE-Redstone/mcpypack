@@ -26,7 +26,8 @@ __all__ += [
     "Time"
 ]
 
-from .utils import Result
+from .utils import SimpleResult, CountedResult
 __all__ += [
-    "Result"
+    "SimpleResult",
+    "CountedResult"
 ]
