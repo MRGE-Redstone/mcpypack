@@ -32,7 +32,6 @@ class SmithingTransform(Recipe):
             Ingredient specifying an item to be upgraded.
         result:
             Item specifying the resulting upgraded item.
-            Can also contain an amount.
         addition:
             Optional.
             Ingredient specifying an item to be added.
