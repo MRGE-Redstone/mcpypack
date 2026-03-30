@@ -17,7 +17,33 @@ class CraftingShaped(Recipe):
                  key: dict[str, Item] | dict[str, list[Item]] | dict[str, list[Item] | Item],
                  result: CountedResult,
                  group: Group | None = None,
-                 category: CategoryLike = Category.MISC) -> None:
+                 category: CategoryLike = Category.MISC,
+                 show_notification: bool | None = None,
+                 ) -> None:
+        """
+        Init shaped crafting recipe.
+
+        Parameters
+        ----------
+        name:
+            Name of the recipe.
+        pattern:
+            Pattern representing a crafting grid.
+            Can be 1*1, 2*2, or 3*3.
+        key:
+            All keys used for this shaped crafting recipe.
+        result:
+            Result of the shaped crafting with id and count.
+        group:
+            Optional.
+            Used to group multiple recipes together in the recipe book.
+        category:
+            Recipe book category.
+            Default is "misc".
+        show_notification:
+            Optional.
+            Determines if a notification is shown when unlocking the recipe.
+        """
 
         super().__init__(name)
 
@@ -45,3 +71,5 @@ class CraftingShaped(Recipe):
         self.config["result"] = result.to_dict()
         if group:
             self.config["group"] = group
+        if show_notification is not None:
+            self.config["show_notification"] = show_notification
