@@ -35,6 +35,12 @@ __all__ += [
     "CountedResult"
 ]
 
+# Category
+from .recipe import Category
+__all__ += [
+    "Category"
+]
+
 # Items
 from .item import Item
 __all__ += [

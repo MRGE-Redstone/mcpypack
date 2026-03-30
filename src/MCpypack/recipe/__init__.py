@@ -32,3 +32,8 @@ __all__ += [
     "SimpleResult",
     "CountedResult"
 ]
+
+from .utils import Category
+__all__ += [
+    "Category"
+]
