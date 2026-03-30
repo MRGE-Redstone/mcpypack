@@ -70,6 +70,13 @@ ns1.add_recipes(
         pattern=["ABA", "AAA", " A "],
         key={"A": Item.GOLD_BLOCK, "B": [Item.DIAMOND, Item.EMERALD]},
         result=CountedResult(Item.TOTEM_OF_UNDYING)
+    ),
+    CratfingTransmute(
+        name="irond_pickaxe",
+        input=Item.IRON_PICKAXE,
+        material=Item.DIAMOND,
+        result=SimpleResult(Item.DIAMOND_PICKAXE),
+        category=Category.EQUIPMENT,
     )
 )
 
