@@ -6,6 +6,7 @@
 # The 3 classes for each type inherit from the Furnace class.
 # All of them have to implement the TYPE property.
 
+from typing import overload
 from MCpypack.item import ItemLike
 from .recipe import Recipe
 from .utils import Time, SimpleResult, Group, CategoryLike, Category, Experience
