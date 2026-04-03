@@ -1,6 +1,8 @@
 # This file contains recipe types for the smithing table
 # 1) Smithing Transform
 
+from packaging.version import Version
+
 from .recipe import Recipe
 from MCpypack.item import ItemLike
 from .utils import SimpleResult
@@ -13,6 +15,13 @@ class SmithingTransform(Recipe):
     @property
     def TYPE(self) -> str:
         return "smithing_transform"
+
+    def check_version(self, version: Version) -> bool:
+        # This just returns True.
+        # Later in development, when working for version-heavy checking this
+        # will be implemented correctly.
+
+        return True
 
     def __init__(self,
                  name: str,
