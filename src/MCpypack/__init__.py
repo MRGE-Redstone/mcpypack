@@ -53,3 +53,10 @@ __all__ += [
     "ItemLike",
     "TrimPattern",
 ]
+
+# Components
+from .item import ItemComponents, Glider
+__all__ += [
+    "ItemComponents",
+    "Glider",
+]

@@ -10,3 +10,13 @@ __all__: list[str] = [
     "ItemLike",
     "TrimPattern",
 ]
+
+
+# Export components
+
+from .components import ItemComponents, Glider
+
+__all__ += [
+    "ItemComponents",
+    "Glider",
+]
