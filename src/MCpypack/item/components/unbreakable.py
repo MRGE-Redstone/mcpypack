@@ -15,6 +15,6 @@ class Unbreakable(ItemComponent):
     def __init__(self) -> None:
         super().__init__()
 
-    def to_dict(self) -> dict:
+    def to_value(self) -> dict:
         return {}
 

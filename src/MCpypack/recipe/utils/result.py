@@ -17,12 +17,12 @@ class SimpleResult:
     item_id: Item
     components: ItemComponents | None = None
 
-    def to_dict(self) -> dict[str, str | dict[str, dict[str, str]]]:
+    def to_dict(self) -> dict[str, str | dict[str, dict[str, str]] | bool]:
         """
         Return the result as a dict.
         """
 
-        result: dict[str, str | dict[str, dict[str, str]]] = {
+        result: dict[str, str | dict[str, dict[str, str]] | bool] = {
             "id": self.item_id.value,
         }
 

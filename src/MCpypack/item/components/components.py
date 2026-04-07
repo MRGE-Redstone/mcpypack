@@ -17,10 +17,10 @@ class ItemComponents:
             Components to add.
         """
 
-        self.config: dict[str, dict[str, str]] = {}
+        self.config: dict[str, dict[str, str] | bool] | bool = {}
 
         for component in components:
-            self.config[f"{component.TYPE}"] = component.to_dict()
+            self.config[f"{component.TYPE}"] = component.to_value()
 
 class ItemComponent(ABC):
     """
@@ -40,10 +40,10 @@ class ItemComponent(ABC):
         New item component.
         """
 
-        self.config: dict[str, str]
+        self.config: dict[str, str | bool]
 
     @abstractmethod
-    def to_dict(self) -> dict[str, str]:
+    def to_value(self) -> dict[str, str] | bool:
         """
         Convert component to dictionary.
         """
