@@ -14,6 +14,7 @@ from .weapon import Weapon
 from .max_damage import MaxDamage
 from .max_stack_size import MaxStackSize
 from .minimum_attack_charge import MinumumAttackCharge
+from .food import Food
 
 __all__: list[str] = [
     "ItemComponents",
@@ -30,4 +31,5 @@ __all__: list[str] = [
     "MaxDamage",
     "MaxStackSize",
     "MinumumAttackCharge",
+    "Food",
 ]
