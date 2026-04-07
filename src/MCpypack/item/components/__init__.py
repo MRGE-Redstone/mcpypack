@@ -10,6 +10,7 @@ from .repair_cost import RepairCost
 from .attack_range import AttackRange
 from .intangible_projectile import IntangibleProjectile
 from .damage import Damage
+from .weapon import Weapon
 
 __all__: list[str] = [
     "ItemComponents",
@@ -22,4 +23,5 @@ __all__: list[str] = [
     "AttackRange",
     "IntangibleProjectile",
     "Damage",
+    "Weapon",
 ]
