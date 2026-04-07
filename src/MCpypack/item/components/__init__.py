@@ -13,6 +13,7 @@ from .damage import Damage
 from .weapon import Weapon
 from .max_damage import MaxDamage
 from .max_stack_size import MaxStackSize
+from .minimum_attack_charge import MinumumAttackCharge
 
 __all__: list[str] = [
     "ItemComponents",
@@ -28,4 +29,5 @@ __all__: list[str] = [
     "Weapon",
     "MaxDamage",
     "MaxStackSize",
+    "MinumumAttackCharge",
 ]
