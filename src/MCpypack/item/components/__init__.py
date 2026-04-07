@@ -8,6 +8,7 @@ from .enchantment_glint_override import EnchantmentGlintOverride
 from .repairable import Repairable
 from .repair_cost import RepairCost
 from .attack_range import AttackRange
+from .intangible_projectile import IntangibleProjectile
 
 __all__: list[str] = [
     "ItemComponents",
@@ -18,4 +19,5 @@ __all__: list[str] = [
     "Repairable",
     "RepairCost",
     "AttackRange",
+    "IntangibleProjectile",
 ]
