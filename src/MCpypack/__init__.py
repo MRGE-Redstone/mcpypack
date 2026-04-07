@@ -55,7 +55,7 @@ __all__ += [
 ]
 
 # Components
-from .item import ItemComponents, Glider, Unbreakable, Consumable, EnchantmentGlintOverride, Repairable
+from .item import ItemComponents, Glider, Unbreakable, Consumable, EnchantmentGlintOverride, Repairable, RepairCost
 __all__ += [
     "ItemComponents",
     "Glider",
@@ -63,4 +63,5 @@ __all__ += [
     "Consumable",
     "EnchantmentGlintOverride",
     "Repairable",
+    "RepairCost",
 ]
