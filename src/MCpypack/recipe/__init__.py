@@ -2,7 +2,7 @@
 
 from .crafting_shaped import CraftingShaped
 from .crafting_shapeless import CraftingShapeless
-from .crafting_transmute import CratfingTransmute
+from .crafting_transmute import CraftingTransmute
 from .crafting_decorated_pot import CraftingDecoratedPot
 from .campfire_cooking import CampfireCooking
 from .furnace import Smelting, Blasting, Smoking
@@ -13,7 +13,7 @@ from .crafting_special import CraftingSpecialShieldDecoration
 __all__: list[str] = [
     "CraftingShaped",
     "CraftingShapeless",
-    "CratfingTransmute",
+    "CraftingTransmute",
     "CraftingDecoratedPot",
     "CampfireCooking",
     "Smelting",

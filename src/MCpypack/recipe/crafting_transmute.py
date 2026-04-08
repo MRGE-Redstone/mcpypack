@@ -7,7 +7,7 @@ from MCpypack.utils import Category, CategoryLike, Group, SimpleResult
 from .recipe import Recipe
 
 
-class CratfingTransmute(Recipe):
+class CraftingTransmute(Recipe):
     """
     Transmute crafting recipe.
     Represents a crafting recipe in a crafting table, a crafter and the survival inventory.
