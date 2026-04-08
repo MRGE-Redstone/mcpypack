@@ -3,8 +3,7 @@
 from packaging.version import Version
 
 from MCpypack.item import ItemLike
-from MCpypack.recipe.utils.result import SimpleResult
-from .utils import Category, CategoryLike, Group
+from MCpypack.utils import Category, CategoryLike, Group, SimpleResult
 from .recipe import Recipe
 
 

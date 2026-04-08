@@ -9,7 +9,7 @@ __all__ += [
 ]
 
 # Times
-from .recipe import Milliseconds, Seconds, Minutes, Hours, Time
+from .utils import Milliseconds, Seconds, Minutes, Hours, Time
 __all__ += [
     "Milliseconds",
     "Seconds",
@@ -19,14 +19,14 @@ __all__ += [
 ]
 
 # Result
-from .recipe import SimpleResult, CountedResult
+from .utils import SimpleResult, CountedResult
 __all__ += [
     "SimpleResult",
     "CountedResult"
 ]
 
 # Category
-from .recipe import Category
+from .utils import Category
 __all__ += [
     "Category"
 ]

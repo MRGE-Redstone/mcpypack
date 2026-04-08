@@ -1,7 +1,7 @@
 from packaging.version import Version
 
 
-from .utils import Category, CategoryLike, Group, CountedResult
+from MCpypack.utils import Category, CategoryLike, Group, CountedResult
 from .recipe import Recipe
 
 from MCpypack.item import ItemLike, item, tag
