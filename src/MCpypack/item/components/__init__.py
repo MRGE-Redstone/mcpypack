@@ -17,6 +17,7 @@ from .minimum_attack_charge import MinumumAttackCharge
 from .food import Food
 from .ominous_bottle_amplifier import OminousBottleAmplifier
 from .use_remainder import UseRemainder
+from .damage_type import DamageType
 
 __all__: list[str] = [
     "ItemComponents",
@@ -36,4 +37,5 @@ __all__: list[str] = [
     "Food",
     "OminousBottleAmplifier",
     "UseRemainder",
+    "DamageType",
 ]
