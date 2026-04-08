@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class TrimPattern(Enum):
+class DamageType(Enum):
     ARROW = "minecraft:arrow"
     BAD_RESPAWN_POINT = "minecraft:bad_respawn_point"
     CACTUS = "minecraft:cactus"

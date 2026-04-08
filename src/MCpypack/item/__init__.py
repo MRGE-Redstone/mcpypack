@@ -1,14 +1,18 @@
 # Export Item enum
 # Export Tags enum
 # Export TrimPattern enum
+# Export Enchantment enum
+# Export DamageType enum
 
-from .final import Item, Tag, ItemLike, TrimPattern
+from .final import Item, Tag, ItemLike, TrimPattern, Enchantment, DamageType
 
 __all__: list[str] = [
     "Item",
     "Tag",
     "ItemLike",
     "TrimPattern",
+    "Enchantment",
+    "DamageType",
 ]
 
 

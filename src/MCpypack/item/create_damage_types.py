@@ -9,7 +9,7 @@ def generate_enum(input_file: str, output_file: str) -> None:
 
     with output_path.open("w", encoding="utf-8") as f:
         f.write("from enum import Enum\n\n\n")
-        f.write("class TrimPattern(Enum):\n")
+        f.write("class DamageType(Enum):\n")
 
         for damage_type in damage_types:
             enum_name: str = damage_type.upper()

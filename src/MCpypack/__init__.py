@@ -45,13 +45,15 @@ __all__ += [
     "Category"
 ]
 
-# Items, Tags, TrimPatterns
-from .item import Item, Tag, ItemLike, TrimPattern
+# Items, Tags, TrimPatterns, Enchantment, DamageType
+from .item import Item, Tag, ItemLike, TrimPattern, Enchantment, DamageType
 __all__ += [
     "Item",
     "Tag",
     "ItemLike",
     "TrimPattern",
+    "Enchantment",
+    "DamageType",
 ]
 
 # Components
