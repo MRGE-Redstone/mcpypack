@@ -37,5 +37,3 @@ class Repairable(ItemComponent):
         return {
             "items": self.items
         }
-
-
