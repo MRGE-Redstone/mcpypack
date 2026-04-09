@@ -27,6 +27,7 @@ from .base_color import BaseColor
 from .enchantable import Enchantable
 from .dye import Dye
 from .rarity import Rarity
+from .use_effects import UseEffects
 
 __all__: list[str] = [
     "ItemComponents",
@@ -56,4 +57,5 @@ __all__: list[str] = [
     "Enchantable",
     "Dye",
     "Rarity",
+    "UseEffects",
 ]
