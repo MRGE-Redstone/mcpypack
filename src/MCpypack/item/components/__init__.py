@@ -21,6 +21,7 @@ from .damage_type import DamageType
 from .stored_enchantments import StoredEnchantments
 from .enchantments import Enchantments
 from .bundle_contents import BundleContents
+from .jukebox_playable import JukeboxPlayable
 
 __all__: list[str] = [
     "ItemComponents",
@@ -43,5 +44,6 @@ __all__: list[str] = [
     "DamageType",
     "StoredEnchantments",
     "Enchantments",
-    "BundleContents"
+    "BundleContents",
+    "JukeboxPlayable",
 ]

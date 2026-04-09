@@ -4,7 +4,7 @@ from .components import ItemComponent
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from MCpypack.item import DamageType as DamageTypeEnum
+    from MCpypack.item.final import DamageType as DamageTypeEnum
 
 class DamageType(ItemComponent):
     """

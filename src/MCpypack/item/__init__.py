@@ -3,12 +3,14 @@
 # Export TrimPattern enum
 # Export Enchantment enum
 # Export DamageType enum
+# Export JukeboxSong enum
 
 from .final import items as item
 from .final import tags as tag
 from .final import trim_patterns as trim_pattern
 from .final import enchantments as enchantment
 from .final import damage_types as damage_type
+from .final import jukebox_songs as jukebox_song
 from .final import ItemLike
 __all__: list[str] = [
     "item",
@@ -16,6 +18,7 @@ __all__: list[str] = [
     "trim_pattern",
     "enchantment",
     "damage_type",
+    "jukebox_song",
     "ItemLike",
 ]
 
