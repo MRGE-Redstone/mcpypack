@@ -37,6 +37,12 @@ __all__ += [
     "Color"
 ]
 
+# Rarity
+from .utils import Rarity
+__all__ += [
+    "Rarity"
+]
+
 # Items, Tags, TrimPatterns, Enchantment, DamageType, JukeboxSong
 from .item import item, tag, trim_pattern, enchantment, damage_type, jukebox_song
 __all__ += [
