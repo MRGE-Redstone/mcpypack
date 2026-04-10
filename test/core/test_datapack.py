@@ -142,7 +142,7 @@ def test_zip_export(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
 
     assert zip_file.exists()
 
-def test_icon_copy(tmp_path, monkeypatch):
+def test_icon_copy(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.chdir(tmp_path)
 
     icon = tmp_path / "icon.png"
@@ -159,7 +159,7 @@ def test_icon_copy(tmp_path, monkeypatch):
 
     assert (tmp_path / "export" / "testpack" / "pack.png").exists()
 
-def test_namespace_export_called(tmp_path, monkeypatch):
+def test_namespace_export_called(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.chdir(tmp_path)
 
     dp = Datapack("testpack", "desc", "1.20.1")
