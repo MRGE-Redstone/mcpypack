@@ -26,10 +26,13 @@ def test_values_contains_all_colors():
 
     assert values == expected
 
-def test_from_str_valid_values():
-    assert Color.from_str("red") == Color.RED
-    assert Color.from_str("blue") == Color.BLUE
-    assert Color.from_str("light_gray") == Color.LIGHT_GREY
+@pytest.mark.parametrize("string, color", [
+    ("red", Color.RED),
+    ("blue", Color.BLUE),
+    ("light_gray", Color.LIGHT_GREY),
+])
+def test_from_str_valid_values(string: str, color: Color):
+    assert Color.from_str(string) == color
 
 def test_from_str_invalid_value():
     with pytest.raises(ValueError):
