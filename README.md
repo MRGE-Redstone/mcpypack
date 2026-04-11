@@ -78,5 +78,8 @@ pack.export()
 ## Website
 - See documentation about MCpypack under our [Website](https://mcpypack.kenolej.de)
 
+## Tests
+- We use [pytest](https://pytest.org)
+
 ## License
 - This project is licensed under the [GNU General Public License v3.0](LICENSE) (GPL-3.0).
