@@ -23,7 +23,7 @@ pip intall MCpypack
 ```python
 from MCpypack.core import Datapack, Namespace
 from MCpypack.recipe import CraftingShapeless
-from MCpypack.utils import CountedResult, Rarity
+from MCpypack.utils import CountedResult, Rarity, SwingAnimation
 from MCpypack import components
 from MCpypack.item.final import Item, Enchantment, DamageType
 
