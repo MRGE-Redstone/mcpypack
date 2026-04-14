@@ -39,7 +39,7 @@ ns1.add_recipes(
         name="python",
         ingredients=[Item.DIAMOND_SWORD, Item.COPPER_INGOT],
         result=ItemStack(
-            Item.COPPER_SWORD,
+            item_id=Item.COPPER_SWORD,
             count=1,
             components=components.ItemComponents(
                 components.EnchantmentGlintOverride(True),
