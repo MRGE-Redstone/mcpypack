@@ -18,11 +18,10 @@ __all__ += [
     "Time"
 ]
 
-# Result
-from .utils import SimpleResult, CountedResult
+# ItemStack
+from .utils import ItemStack
 __all__ += [
-    "SimpleResult",
-    "CountedResult"
+    "ItemStack"
 ]
 
 # Category
@@ -41,6 +40,12 @@ __all__ += [
 from .utils import Rarity
 __all__ += [
     "Rarity"
+]
+
+# SwingAnimation
+from .utils import SwingAnimation
+__all__ += [
+    "SwingAnimation"
 ]
 
 # Items, Tags, TrimPatterns, TrimMaterials, Enchantment, DamageType, JukeboxSong

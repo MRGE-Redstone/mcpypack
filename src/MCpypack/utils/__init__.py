@@ -1,11 +1,12 @@
 # __init__.py file of 'recipe/utils/'
 # Export Category and CategoryLike
 # Export Group
-# Export SimpleResult, CountedResult
+# Export ItemStack
 # Export Experience
 # Export Time, Milliseconds, Seconds, Minutes, and Hours
 # Export Color
 # Export Rarity
+# Export SwingAnimation
 
 __all__: list[str] = []
 
@@ -15,8 +16,8 @@ __all__ += ["Category", "CategoryLike"]
 from .group import Group
 __all__ += ["Group"]
 
-from .result import SimpleResult, CountedResult
-__all__ += ["SimpleResult", "CountedResult"]
+from .item_stack import ItemStack
+__all__ += ["ItemStack"]
 
 from .experience import Experience
 __all__ += ["Experience"]
@@ -29,3 +30,6 @@ __all__ += ["Color"]
 
 from .rarity import Rarity
 __all__ += ["Rarity"]
+
+from .swing_animation import SwingAnimation
+__all__ += ["SwingAnimation"]
