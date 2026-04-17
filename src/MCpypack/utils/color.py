@@ -1,6 +1,7 @@
 # This file contains the color enum
 
 from enum import StrEnum
+import re
 
 class Color(StrEnum):
     """
@@ -54,3 +55,46 @@ class Color(StrEnum):
             return cls(value)
         except ValueError:
             raise ValueError(f"Invalid color: {value}")
+
+class HexColor:
+    """
+    Color class that uses a hex value for the color.
+    """
+
+    HEX_PATTERN = re.compile(r"^[0-9a-fA-F]{6}$")
+
+    @property
+    def color(self) -> str:
+        return self._color
+
+    @color.setter
+    def color(self, value: str) -> None:
+        if not isinstance(value, str):
+            raise ValueError(f"color must be a string, got: type = {type(value)}")
+
+        if not self.HEX_PATTERN.fullmatch(value):
+            raise ValueError(f"color must be a valid 6-digit hex string, got: {value}")
+
+        self._color = value.upper()
+
+    def __init__(self,
+                 color: str
+                 ) -> None:
+        """
+        Init a new HexColor object.
+        """
+
+        self.color = color
+
+    @classmethod
+    def from_str(cls, value: str) -> HexColor:
+        """
+        Turn string into a hex color.
+
+        Parameters
+        ----------
+        value:
+            String which will be converted into a color.
+        """
+
+        return cls(value)

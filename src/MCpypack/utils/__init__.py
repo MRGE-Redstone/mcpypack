@@ -25,8 +25,8 @@ __all__ += ["Experience"]
 from .times import Time, Milliseconds, Seconds, Minutes, Hours
 __all__ += ["Time", "Milliseconds", "Seconds", "Minutes", "Hours"]
 
-from .color import Color
-__all__ += ["Color"]
+from .color import Color, HexColor
+__all__ += ["Color", "HexColor"]
 
 from .rarity import Rarity
 __all__ += ["Rarity"]

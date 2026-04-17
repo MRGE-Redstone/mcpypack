@@ -31,9 +31,10 @@ __all__ += [
 ]
 
 # Color
-from .utils import Color
+from .utils import Color, HexColor
 __all__ += [
-    "Color"
+    "Color",
+    "HexColor"
 ]
 
 # Rarity
