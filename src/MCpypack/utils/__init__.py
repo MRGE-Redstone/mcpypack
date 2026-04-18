@@ -4,7 +4,7 @@
 # Export ItemStack
 # Export Experience
 # Export Time, Milliseconds, Seconds, Minutes, and Hours
-# Export Color
+# Export Color, HexColor, TextColor
 # Export Rarity
 # Export SwingAnimation
 
@@ -25,8 +25,8 @@ __all__ += ["Experience"]
 from .times import Time, Milliseconds, Seconds, Minutes, Hours
 __all__ += ["Time", "Milliseconds", "Seconds", "Minutes", "Hours"]
 
-from .color import Color, HexColor
-__all__ += ["Color", "HexColor"]
+from .color import Color, HexColor, TextColor
+__all__ += ["Color", "HexColor", "TextColor"]
 
 from .rarity import Rarity
 __all__ += ["Rarity"]

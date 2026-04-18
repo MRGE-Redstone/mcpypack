@@ -30,11 +30,12 @@ __all__ += [
     "Category"
 ]
 
-# Color
-from .utils import Color, HexColor
+# Colors
+from .utils import Color, HexColor, TextColor
 __all__ += [
     "Color",
-    "HexColor"
+    "HexColor",
+    "TextColor",
 ]
 
 # Rarity
