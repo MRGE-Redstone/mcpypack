@@ -23,7 +23,7 @@ pip intall MCpypack
 ```python
 from MCpypack.core import Datapack, Namespace
 from MCpypack.recipe import CraftingShapeless
-from MCpypack.utils import ItemStack, Rarity, SwingAnimation
+from MCpypack.utils import ItemStack, Rarity, SwingAnimation, PlainText, TextColor, Formatting
 from MCpypack import components
 from MCpypack.item.final import Item, Enchantment, DamageType
 
@@ -66,7 +66,14 @@ ns1.add_recipes(
                 components.SwingAnimation(
                     animation_type=SwingAnimation.STAB,
                     duration=10,
-                )
+                ),
+                components.CustomName(PlainText(
+                    text="MCpypack Sword",
+                    formatting=Formatting(
+                        color=TextColor.AQUA,
+                        bold=True,
+                    )
+                ))
             )
         )
     ),
