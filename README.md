@@ -67,7 +67,7 @@ ns1.add_recipes(
                     animation_type=SwingAnimation.STAB,
                     duration=10,
                 ),
-                components.CustomName(PlainText(
+                components.ItemName(PlainText(
                     text="MCpypack Sword",
                     formatting=Formatting(
                         color=TextColor.AQUA,

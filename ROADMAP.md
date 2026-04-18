@@ -42,7 +42,7 @@
     - [ ] Instrument
     - [x] IntangibleProjectile
     - [ ] ItemModel
-    - [ ] ItemName
+    - [x] ItemName
     - [x] JukeboxPlayable
     - [ ] KineticWeapon
     - [ ] Lock
