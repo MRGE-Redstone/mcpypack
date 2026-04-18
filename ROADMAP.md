@@ -22,7 +22,7 @@
     - [ ] ContainerLoot
     - [ ] CustomData
     - [ ] CustomModelData
-    - [ ] CustomName
+    - [x] CustomName
     - [x] Damage
     - [ ] DamageResistant
     - [x] DamageType
