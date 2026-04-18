@@ -67,3 +67,10 @@ from .item import components
 __all__ += [
     "components",
 ]
+
+# Text
+from .utils import Formatting, PlainText
+__all__ += [
+    "Formatting",
+    "PlainText",
+]

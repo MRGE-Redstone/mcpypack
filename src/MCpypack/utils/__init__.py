@@ -7,6 +7,7 @@
 # Export Color, HexColor, TextColor
 # Export Rarity
 # Export SwingAnimation
+# Export Text
 
 __all__: list[str] = []
 
@@ -33,3 +34,9 @@ __all__ += ["Rarity"]
 
 from .swing_animation import SwingAnimation
 __all__ += ["SwingAnimation"]
+
+from .text import Formatting, PlainText
+__all__ += [
+    "Formatting",
+    "PlainText",
+]

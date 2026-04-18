@@ -31,6 +31,7 @@ from .use_effects import UseEffects
 from .provides_trim_material import ProvidesTrimMaterial
 from .bucket_entity_data import BucketEntityData
 from .swing_animation import SwingAnimation
+from .custom_name import CustomName
 
 __all__: list[str] = [
     "ItemComponents",
@@ -64,4 +65,5 @@ __all__: list[str] = [
     "ProvidesTrimMaterial",
     "BucketEntityData",
     "SwingAnimation",
+    "CustomName",
 ]

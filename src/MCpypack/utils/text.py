@@ -11,13 +11,13 @@ class Formatting:
     """
 
     @property
-    def color(self) -> HexColor | TextColor:
+    def color(self) -> HexColor | TextColor | None:
         return self._color
 
     @color.setter
-    def color(self, value: HexColor | TextColor) -> None:
-        if not isinstance(value, (HexColor, TextColor)):
-            raise ValueError(f"color must be of type HexColor | TextColor, got: {type(value)}")
+    def color(self, value: HexColor | TextColor | None) -> None:
+        if not isinstance(value, (HexColor, TextColor, type(None))):
+            raise ValueError(f"color must be of type HexColor | TextColor | None, got: {type(value)}")
 
         self._color = value
 
@@ -77,13 +77,17 @@ class Formatting:
         self._obfuscated = value
 
     @property
-    def shadow_color(self) -> int:
+    def shadow_color(self) -> int | None:
         return self._shadow_color
 
     @shadow_color.setter
-    def shadow_color(self, value: int) -> None:
-        if not isinstance(value, int):
-            raise ValueError(f"shadow_color must be of type int, got: {type(value)}")
+    def shadow_color(self, value: int | None) -> None:
+        if not isinstance(value, (int, type(None))):
+            raise ValueError(f"shadow_color must be of type int | None, got: {type(value)}")
+
+        if isinstance(value, type(None)):
+            self._shadow_color = None
+            return
 
         if value < 0:
             raise ValueError(f"shadow_color must be at least 0, got: {value}")
@@ -92,13 +96,13 @@ class Formatting:
 
     def __init__(self,
                  *,
-                 color: HexColor | TextColor,
+                 color: HexColor | TextColor | None = None,
                  bold: bool = False,
                  italic: bool = False,
                  underlined: bool = False,
                  strikethrough: bool = False,
                  obfuscated: bool = False,
-                 shadow_color: int | None,
+                 shadow_color: int | None = None,
                  ) -> None:
         """
         Init text formatting object.
@@ -127,8 +131,7 @@ class Formatting:
         self.underlined = underlined
         self.strikethrough = strikethrough
         self.obfuscated = obfuscated
-        if shadow_color is not None:
-            self.shadow_color = shadow_color
+        self.shadow_color = shadow_color
 
     def to_dict(self) -> dict[str, str | bool | int]:
         result: dict[str, str | bool | int] = {}
