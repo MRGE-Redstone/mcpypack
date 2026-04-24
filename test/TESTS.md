@@ -33,7 +33,7 @@ We use pytest for testing.
 - [ ] src/MCpypack/item/components/intangible_projectile.py
 - [ ] src/MCpypack/item/components/item_name.py
 - [ ] src/MCpypack/item/components/jukebox_playable.py
-- [ ] src/MCpypack/item/components/max_damage.py
+- [x] src/MCpypack/item/components/max_damage.py
 - [ ] src/MCpypack/item/components/max_stack_size.py
 - [ ] src/MCpypack/item/components/minimum_attack_charge.py
 - [ ] src/MCpypack/item/components/ominous_bottle_amplifier.py
