@@ -22,7 +22,7 @@ class UseRemainder(ItemComponent):
     @use_remainder.setter
     def use_remainder(self, use_remainder: ItemStack) -> None:
         if not isinstance(use_remainder, ItemStack):
-            raise ValueError(f"use_remainder must be of type ItemStack, got: {type(use_remainder)}")
+            raise TypeError(f"use_remainder must be of type ItemStack, got: {type(use_remainder)}")
 
         self._use_remainder = use_remainder
 

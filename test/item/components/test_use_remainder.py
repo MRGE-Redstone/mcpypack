@@ -12,5 +12,5 @@ def test_to_value():
     assert UseRemainder(stack).to_value() == stack.to_dict()
 
 def test_invalid_value():
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         UseRemainder("hello")
