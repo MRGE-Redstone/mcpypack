@@ -91,6 +91,7 @@ pack.export()
 
 ## Tests
 - We use [pytest](https://pytest.org)
+- See an overview of the tests [here](test/TESTS.md)
 
 ## Roadmap
 - See our [Roadmap](ROADMAP.md)
