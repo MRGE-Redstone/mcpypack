@@ -73,7 +73,7 @@ We use pytest for testing.
 # Recipe
 
 - [x] src/MCpypack/recipe/campfire_cooking.py
-- [ ] src/MCpypack/recipe/crafting_decorated_pot.py
+- [x] src/MCpypack/recipe/crafting_decorated_pot.py
 - [ ] src/MCpypack/recipe/crafting_shaped.py
 - [ ] src/MCpypack/recipe/crafting_shapeless.py
 - [x] src/MCpypack/recipe/crafting_special/crafting_special_bannerduplicate.py
