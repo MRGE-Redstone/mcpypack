@@ -100,7 +100,7 @@
     - [x] Stonecutting
     - [ ] CraftingSpecial
         - [ ] Armordye
-        - [ ] Bannerduplicate
+        - [x] Bannerduplicate
         - [ ] Bookcloning
         - [ ] FireworkRocket
         - [ ] FireworkStar

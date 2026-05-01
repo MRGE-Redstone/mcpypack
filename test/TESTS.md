@@ -76,6 +76,7 @@ We use pytest for testing.
 - [ ] src/MCpypack/recipe/crafting_decorated_pot.py
 - [ ] src/MCpypack/recipe/crafting_shaped.py
 - [ ] src/MCpypack/recipe/crafting_shapeless.py
+- [x] src/MCpypack/recipe/crafting_special/crafting_special_bannerduplicate
 - [ ] src/MCpypack/recipe/crafting_special/crafting_special_shielddecoration.py
 - [ ] src/MCpypack/recipe/crafting_transmute.py
 - [ ] src/MCpypack/recipe/furnace.py
