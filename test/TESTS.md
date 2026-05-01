@@ -44,7 +44,7 @@ We use pytest for testing.
 - [ ] src/MCpypack/item/components/stored_enchantments.py
 - [x] src/MCpypack/item/components/swing_animation.py
 - [x] src/MCpypack/item/components/unbreakable.py
-- [ ] src/MCpypack/item/components/use_effects.py
+- [x] src/MCpypack/item/components/use_effects.py
 - [x] src/MCpypack/item/components/use_remainder.py
 - [x] src/MCpypack/item/components/weapon.py
 
