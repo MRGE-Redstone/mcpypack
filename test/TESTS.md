@@ -46,7 +46,7 @@ We use pytest for testing.
 - [x] src/MCpypack/item/components/unbreakable.py
 - [ ] src/MCpypack/item/components/use_effects.py
 - [x] src/MCpypack/item/components/use_remainder.py
-- [ ] src/MCpypack/item/components/weapon.py
+- [x] src/MCpypack/item/components/weapon.py
 
 <!--
 ### Creation scripts
