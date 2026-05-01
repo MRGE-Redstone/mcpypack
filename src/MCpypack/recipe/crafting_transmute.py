@@ -15,7 +15,7 @@ class CraftingTransmute(Recipe):
     preserving all stack components.
     """
 
-    TYPE = "crafting_transmute"
+    TYPE = "minecraft:crafting_transmute"
 
     def check_version(self, version: Version) -> bool:
         # This just returns True.

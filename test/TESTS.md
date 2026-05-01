@@ -79,7 +79,7 @@ We use pytest for testing.
 - [x] src/MCpypack/recipe/crafting_special/crafting_special_bannerduplicate.py
 - [x] src/MCpypack/recipe/crafting_special/crafting_special_repairitem.py
 - [x] src/MCpypack/recipe/crafting_special/crafting_special_shielddecoration.py
-- [ ] src/MCpypack/recipe/crafting_transmute.py
+- [x] src/MCpypack/recipe/crafting_transmute.py
 - [ ] src/MCpypack/recipe/furnace.py
 - [ ] src/MCpypack/recipe/recipe.py
 - [ ] src/MCpypack/recipe/smithing.py
