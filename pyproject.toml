@@ -13,7 +13,19 @@ readme = "README.md"
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
 requires-python = ">=3.14"
-dependencies = ["packaging>=26.0,"]
+dependencies = ["packaging>=26.0"]
+keywords = [
+  "MCpypack",
+  "minecraft",
+  "datapack",
+]
+
+[project.urls]
+Repository = "https://github.com/MRGE-Redstone/mcpypack"
+Documentation = "https://mcpypack.kenolej.de/"
+
+[tool.setuptools.package-data]
+"MCpypack" = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
