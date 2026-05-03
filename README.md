@@ -17,7 +17,7 @@
 
 ## Installation
 ```bash
-pip intall MCpypack
+pip install MCpypack
 ```
 
 ## Example
