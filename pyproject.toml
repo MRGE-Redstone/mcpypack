@@ -20,6 +20,10 @@ keywords = [
   "datapack",
 ]
 
+[project.urls]
+Repository = "https://github.com/MRGE-Redstone/mcpypack"
+Documentation = "https://mcpypack.kenolej.de/"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["MCpypack", "MCpypack.*"]
